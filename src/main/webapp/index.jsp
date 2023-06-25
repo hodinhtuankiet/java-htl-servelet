@@ -35,7 +35,7 @@
 		class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top"
 		id="mainNav">
 		<div class="container">
-			<a class="navbar-brand" href="#page-top">Unique Developer</a>
+			<a class="navbar-brand" href="#page-top">Hotel Tuan Kiet</a>
 			<button
 				class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded"
 				type="button" data-bs-toggle="collapse"
@@ -52,31 +52,37 @@
 					<li class="nav-item mx-0 mx-lg-1"><a
 						class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Contact</a></li>
 					<li class="nav-item mx-0 mx-lg-1"><a
-						class="nav-link py-3 px-0 px-lg-3 rounded" href="">Logout</a></li>
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="Logout">Logout</a></li>
+					<li class="nav-item mx-0 mx-lg-1 bg-danger"><a
+						class="nav-link py-3 px-0 px-lg-3 rounded" href="Logout"><%=session.getAttribute("name")%></a></li>
 					
 				</ul>
 			</div>
 		</div>
 	</nav>
 	<!-- Masthead-->
-	<header class="masthead bg-primary text-white text-center">
+	<header style="background:url(./assets/img/hotel.jpg);background-size: cover;background-repeat: no-repeat;" class="masthead text-white text-center">
 		<div class="container d-flex align-items-center flex-column">
 			<!-- Masthead Avatar Image-->
 			<img class="masthead-avatar mb-5" src="assets/img/avataaars.svg"
 				alt="..." />
 			<!-- Masthead Heading-->
-			<h1 class="masthead-heading text-uppercase mb-0">Welcome To Unique Developer</h1>
+			<h1 class="masthead-heading text-uppercase mb-0">Welcome To My Hotel</h1>
 			<!-- Icon Divider-->
 			<div class="divider-custom divider-light">
 				<div class="divider-custom-line"></div>
 				<div class="divider-custom-icon">
 					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
+					<i class="fas fa-star"></i>
 				</div>
 				<div class="divider-custom-line"></div>
 			</div>
 			<!-- Masthead Subheading-->
-			<p class="masthead-subheading font-weight-light mb-0">Java
-				Development - Web Development - Python</p>
+			<p class="masthead-subheading font-weight-light mb-0">
+				Service quality - Luxury - Convenient</p>
 		</div>
 	</header>
 	<!-- Portfolio Section-->
@@ -106,7 +112,7 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img class="img-fluid" src="assets/img/portfolio/cabin.png"
+						<img class="img-fluid" src="assets/img/portfolio/room_planner_1.png"
 							alt="..." />
 					</div>
 				</div>
@@ -121,7 +127,7 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img class="img-fluid" src="assets/img/portfolio/cake.png"
+						<img class="img-fluid" src="assets/img/portfolio/aaaa.jpg"
 							alt="..." />
 					</div>
 				</div>
@@ -136,7 +142,7 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img class="img-fluid" src="assets/img/portfolio/circus.png"
+						<img class="img-fluid" src="assets/img/portfolio/b-1.jpg"
 							alt="..." />
 					</div>
 				</div>
@@ -151,7 +157,7 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img class="img-fluid" src="assets/img/portfolio/game.png"
+						<img class="img-fluid" src="assets/img/portfolio/b-2.jpg"
 							alt="..." />
 					</div>
 				</div>
@@ -166,7 +172,7 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img class="img-fluid" src="assets/img/portfolio/safe.png"
+						<img class="img-fluid" src="assets/img/portfolio/c-1.png"
 							alt="..." />
 					</div>
 				</div>
@@ -181,7 +187,7 @@
 								<i class="fas fa-plus fa-3x"></i>
 							</div>
 						</div>
-						<img class="img-fluid" src="assets/img/portfolio/submarine.png"
+						<img class="img-fluid" src="assets/img/portfolio/c-2.jpg"
 							alt="..." />
 					</div>
 				</div>
@@ -370,8 +376,7 @@
 							<div class="col-lg-8">
 								<!-- Portfolio Modal - Title-->
 								<h2
-									class="portfolio-modal-title text-secondary text-uppercase mb-0">Log
-									Cabin</h2>
+									class="portfolio-modal-title text-secondary text-uppercase mb-0">Room A-1 <br> <br> 1.000.000/day </h2>
 								<!-- Icon Divider-->
 								<div class="divider-custom">
 									<div class="divider-custom-line"></div>
@@ -382,7 +387,7 @@
 								</div>
 								<!-- Portfolio Modal - Image-->
 								<img class="img-fluid rounded mb-5"
-									src="assets/img/portfolio/cabin.png" alt="..." />
+									src="assets/img/portfolio/room_planner_1.png" alt="..." />
 								<!-- Portfolio Modal - Text-->
 								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
 									adipisicing elit. Mollitia neque assumenda ipsam nihil,
@@ -415,8 +420,7 @@
 							<div class="col-lg-8">
 								<!-- Portfolio Modal - Title-->
 								<h2
-									class="portfolio-modal-title text-secondary text-uppercase mb-0">Tasty
-									Cake</h2>
+									class="portfolio-modal-title text-secondary text-uppercase mb-0">Room A-2 <br> <br> 1.500.000/day</h2>
 								<!-- Icon Divider-->
 								<div class="divider-custom">
 									<div class="divider-custom-line"></div>
@@ -427,7 +431,7 @@
 								</div>
 								<!-- Portfolio Modal - Image-->
 								<img class="img-fluid rounded mb-5"
-									src="assets/img/portfolio/cake.png" alt="..." />
+									src="assets/img/portfolio/aaaa.jpg" alt="..." />
 								<!-- Portfolio Modal - Text-->
 								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
 									adipisicing elit. Mollitia neque assumenda ipsam nihil,
@@ -460,8 +464,7 @@
 							<div class="col-lg-8">
 								<!-- Portfolio Modal - Title-->
 								<h2
-									class="portfolio-modal-title text-secondary text-uppercase mb-0">Circus
-									Tent</h2>
+									class="portfolio-modal-title text-secondary text-uppercase mb-0">Room B-1 <br> <br> 800.000/day</h2>
 								<!-- Icon Divider-->
 								<div class="divider-custom">
 									<div class="divider-custom-line"></div>
@@ -472,7 +475,7 @@
 								</div>
 								<!-- Portfolio Modal - Image-->
 								<img class="img-fluid rounded mb-5"
-									src="assets/img/portfolio/circus.png" alt="..." />
+									src="assets/img/portfolio/b-1.jpg" alt="..." />
 								<!-- Portfolio Modal - Text-->
 								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
 									adipisicing elit. Mollitia neque assumenda ipsam nihil,
@@ -505,7 +508,7 @@
 							<div class="col-lg-8">
 								<!-- Portfolio Modal - Title-->
 								<h2
-									class="portfolio-modal-title text-secondary text-uppercase mb-0">Controller</h2>
+									class="portfolio-modal-title text-secondary text-uppercase mb-0">Room B-2 <br> <br> 600.000/day</h2>
 								<!-- Icon Divider-->
 								<div class="divider-custom">
 									<div class="divider-custom-line"></div>
@@ -516,7 +519,7 @@
 								</div>
 								<!-- Portfolio Modal - Image-->
 								<img class="img-fluid rounded mb-5"
-									src="assets/img/portfolio/game.png" alt="..." />
+									src="assets/img/portfolio/b-2.jpg" alt="..." />
 								<!-- Portfolio Modal - Text-->
 								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
 									adipisicing elit. Mollitia neque assumenda ipsam nihil,
@@ -549,8 +552,7 @@
 							<div class="col-lg-8">
 								<!-- Portfolio Modal - Title-->
 								<h2
-									class="portfolio-modal-title text-secondary text-uppercase mb-0">Locked
-									Safe</h2>
+									class="portfolio-modal-title text-secondary text-uppercase mb-0">Room C-1 <br> <br> 500.000/day</h2>
 								<!-- Icon Divider-->
 								<div class="divider-custom">
 									<div class="divider-custom-line"></div>
@@ -561,7 +563,7 @@
 								</div>
 								<!-- Portfolio Modal - Image-->
 								<img class="img-fluid rounded mb-5"
-									src="assets/img/portfolio/safe.png" alt="..." />
+									src="assets/img/portfolio/c-1.png" alt="..." />
 								<!-- Portfolio Modal - Text-->
 								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
 									adipisicing elit. Mollitia neque assumenda ipsam nihil,
@@ -594,7 +596,7 @@
 							<div class="col-lg-8">
 								<!-- Portfolio Modal - Title-->
 								<h2
-									class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
+									class="portfolio-modal-title text-secondary text-uppercase mb-0">Room C-2 <br> <br> 400.000/day</h2>
 								<!-- Icon Divider-->
 								<div class="divider-custom">
 									<div class="divider-custom-line"></div>
@@ -605,7 +607,7 @@
 								</div>
 								<!-- Portfolio Modal - Image-->
 								<img class="img-fluid rounded mb-5"
-									src="assets/img/portfolio/submarine.png" alt="..." />
+									src="assets/img/portfolio/c-2.jpg" alt="..." />
 								<!-- Portfolio Modal - Text-->
 								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
 									adipisicing elit. Mollitia neque assumenda ipsam nihil,

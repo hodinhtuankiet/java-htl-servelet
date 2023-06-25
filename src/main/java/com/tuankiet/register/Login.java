@@ -37,8 +37,13 @@ public class Login extends HttpServlet {
 			
 			if(rs.next())
 			{
-				session.setAttribute("name", rs.getString("uname"));
-				dispatcher = request.getRequestDispatcher("index.jsp");
+				if(uemail.equals("hodinhtuankiet@gmail.com"))
+				{
+					dispatcher = request.getRequestDispatcher("admin.jsp");
+				}else {
+					session.setAttribute("name", rs.getString("uname"));
+					dispatcher = request.getRequestDispatcher("index.jsp");
+				}
 			}else {
 				request.setAttribute("status", "failed");
 				dispatcher = request.getRequestDispatcher("login.jsp");
