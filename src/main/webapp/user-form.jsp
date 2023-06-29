@@ -1,7 +1,7 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
-	
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html>
 <head>
 <title>User Management Application</title>
@@ -9,14 +9,16 @@
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
 	crossorigin="anonymous">
+<link rel="stylesheet" href="/css/NewFile.css" />
+
 </head>
 <body>
 
 	<header>
 		<nav class="navbar navbar-expand-md navbar-dark"
-			style="background-color: tomato">
+			style="background-color: blue">
 			<div>
-				<a href="https://www.javaguides.net" class="navbar-brand"> User Management App </a>
+				<a href="https://www.xadmin.net" class="navbar-brand"> User Management Application </a>
 			</div>
 
 			<ul class="navbar-nav">
@@ -66,17 +68,17 @@
 				<fieldset class="form-group">
 					<label>User address</label> <input type="text"
 						value="<c:out value='${user.address}' />" class="form-control"
-						name="country">
+						name="address">
 				</fieldset>
 				<fieldset class="form-group">
 					<label>User phone</label> <input type="text"
 						value="<c:out value='${user.phone}' />" class="form-control"
-						name="country">
+						name="phone">
 				</fieldset>
 				<fieldset class="form-group">
 					<label>User room</label> <input type="text"
 						value="<c:out value='${user.room}' />" class="form-control"
-						name="country">
+						name="room">
 				</fieldset>
 
 				<button type="submit" class="btn btn-success">Save</button>

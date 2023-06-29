@@ -1,0 +1,423 @@
+/*  import google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+    --orange-color: #F68422;
+    --black2-color: #161311;
+    --black1-color: #000;
+    --white-color: #fff;
+    --grey-color: rgba(255, 255, 255, 0.6);
+    --grey-white--color: #DCD7C9;
+    --background-item: #2E2E2E;
+    --background-img-item: #242424;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: url(../img/close-up-view-dark-fresh-roasted-coffee-beans-coffee-beans-background.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    background: #68686d;
+}
+
+.container {
+    display: flex;
+    width: 1300px;
+    margin: auto;
+    /* height: 100%; */
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    height: 110vh;
+    background: rgba(96, 59, 3, 0.2);
+}
+
+.navbar {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.logo {
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.img img {
+    width: 60px;
+    height: 50px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.logo h1 {
+    margin-left: 1rem;
+    text-transform: uppercase;
+    color: var(--white-color);
+}
+
+ul {
+    margin: 0 auto;
+}
+
+li {
+    padding-bottom: 2rem;
+}
+
+li a {
+    font-size: 16px;
+    color: var(--white-color);
+}
+
+
+nav i {
+    width: 50px;
+    font-size: 18px;
+    text-align: center;
+}
+
+/* .logout {
+    position: absolute;
+    bottom: 20px;
+} */
+
+/* Main Section */
+.main {
+    width: 100%;
+}
+
+#active {
+    color: var(--white-color);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.text h2 {
+    font-size: 18px;
+    color: var(--white-color);
+}
+
+.main-top {
+    width: 100%;
+    background: rgba(96, 59, 3, 0.107);
+    padding: 10px;
+    text-align: center;
+    font-size: 19px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--white-color);
+}
+
+
+.main-body {
+    padding: 10px 10px 10px 20px;
+}
+
+.main-body h1 {
+    color: var(--white-color);
+}
+
+h1 {
+    margin: 20px 10px;
+}
+
+.search_bar {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.search_bar input {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid rgb(190, 190, 190);
+    background: rgba(160, 82, 45, 0.3);
+    color: var(--white-color);
+}
+
+.search_bar input::placeholder {
+    color: var(--white-color);
+}
+
+.search_bar input:focus {
+    border: 1px solid blueviolet;
+}
+
+.search_bar select {
+    border: 1px solid rgb(190, 190, 190);
+    padding: 10px;
+    color: var(--white-color);
+    margin-left: 2rem;
+    background: rgba(160, 82, 45, 0.3);
+}
+
+.search_bar .filter {
+    width: 300px;
+
+}
+
+.tags_bar {
+    width: 55%;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.tag {
+    background: #fff;
+    padding: 10px 15px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.tag i {
+    margin-right: 0.7rem;
+}
+
+.row {
+    display: flex;
+    padding: 10px;
+    margin-top: 1.3rem;
+    justify-content: space-between;
+}
+
+.row p {
+    color: var(--white-color);
+    font-size: 15px;
+}
+
+.row p span {
+    color: blueviolet;
+}
+
+.job_card {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    border-radius: 10px;
+    background: rgba(169, 166, 164, 0.5);
+    margin-bottom: 15px;
+    justify-content: space-between;
+    border: 2px solid rgb(190, 190, 190);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.job_card:hover {
+    border: 2px solid blueviolet;
+    transition: 0.4s;
+}
+
+.job_card .job_details h2 span h4 {
+    color: var(--white-color);
+}
+
+.job_details {
+    display: flex;
+}
+
+.job_details .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.job_details .img i {
+    width: 70px;
+    font-size: 3rem;
+    margin-left: 1rem;
+    padding: 10px;
+    color: rgb(82, 22, 138);
+    background: rgb(216, 205, 226);
+}
+
+.job_details .text {
+    margin-left: 2.3rem;
+}
+
+.job_details .text span {
+    color: var(--white-color);
+}
+
+.job_salary {
+    text-align: right;
+    color: var(--white-color);
+}
+
+.job_card:active {
+    border: 2px solid blueviolet;
+    transition: 0.4s;
+}
+
+/* --------------------------------------------------- */
+.delete_form {
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    position: absolute;
+    left: 38%;
+    top: 0;
+    border-radius: 10px;
+}
+
+.buton-edit {
+    padding: 4px 15px;
+    background: rgb(18, 65, 235);
+    color: white;
+    font-weight: 500;
+    border-radius: 3px;
+
+}
+
+.buton-edit:hover {
+    background-color: #161311;
+    color: white;
+}
+
+.buton-delete {
+    padding: 4px 15px;
+    background: rgb(220, 18, 18);
+    color: white;
+    font-weight: 500;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.buton-delete:hover {
+    background: rgb(186, 68, 68);
+    color: var(--black1-color);
+}
+
+.delete_form p {
+    padding: 5px 0px;
+}
+
+.delete_form .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete_form .btn-delete-confirm {
+    padding: 5px 16px;
+    color: black;
+    background-color: red;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.delete_form .btn-delete-cancel {
+    cursor: pointer;
+}
+
+.delete_form .btn-delete-confirm:hover {
+    background-color: rgb(198, 26, 26);
+}
+
+.delete_form .btn-delete-cancel:hover {
+    background-color: rgb(177, 171, 171);
+
+}
+
+.delete_form .btn-delete-cancel {
+    padding: 5px 16px;
+    color: black;
+    background-color: rgb(122, 117, 117);
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+.delete_form.active {
+    display: block;
+}
+
+.blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 50px 100px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.432);
+    z-index: 99999;
+    width: calc(100% - 500px);
+    display: none;
+    overflow: hidden;
+}
+
+.edit {
+    width: 100%;
+}
+
+.row_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.row_2 input {
+    width: 100%;
+    /* height: 40px; */
+    font-size: 17px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(220, 213, 213);
+    margin-top: 10px;
+    background-color: transparent;
+    color: white;
+}
+
+.row_2 input:hover {
+    border: 1px solid rgb(176, 55, 55);
+}
+
+.row_2 label {
+    color: white;
+}
+
+.event {
+    margin-top: 50px;
+    float: right;
+
+}
+
+.event button {
+    padding: 10px;
+    background-color: #8b90da;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.event button:hover {
+    background-color: #161311;
+    color: white;
+
+}
