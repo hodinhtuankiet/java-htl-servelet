@@ -23,6 +23,10 @@
 				<li><a href="<%=request.getContextPath()%>/list"
 					class="nav-link">Users</a></li>
 			</ul>
+			<ul class="navbar-nav">
+				<li><a href="login.jsp"
+					class="nav-link">Log Out</a></li>
+			</ul>
 		</nav>
 	</header>
 	<br>

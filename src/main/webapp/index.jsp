@@ -4,8 +4,6 @@
 		response.sendRedirect("login.jsp");
 	}
 %>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +25,7 @@
 	href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
 	rel="stylesheet" type="text/css" />
 <!-- Core theme CSS (includes Bootstrap)-->
-<link href="css/index-styles.css" rel="stylesheet" />
+<link href="/css/index-styles.css" rel="stylesheet" />
 </head>
 <body id="page-top">
 	<!-- Navigation-->
@@ -64,7 +62,7 @@
 	<header style="background:url(./assets/img/hotel.jpg);background-size: cover;background-repeat: no-repeat;" class="masthead text-white text-center">
 		<div class="container d-flex align-items-center flex-column">
 			<!-- Masthead Avatar Image-->
-			<img class="masthead-avatar mb-5" src="assets/img/avataaars.svg"
+			<img class="masthead-avatar mb-5" src="./assets/img/avataaars.svg"
 				alt="..." />
 			<!-- Masthead Heading-->
 			<h1 class="masthead-heading text-uppercase mb-0">Welcome To My Hotel</h1>

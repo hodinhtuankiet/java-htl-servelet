@@ -39,7 +39,7 @@ public class Login extends HttpServlet {
 			{
 				if(uemail.equals("hodinhtuankiet@gmail.com"))
 				{
-					dispatcher = request.getRequestDispatcher("admin.jsp");
+					dispatcher = request.getRequestDispatcher("user-form.jsp");
 				}else {
 					session.setAttribute("name", rs.getString("uname"));
 					dispatcher = request.getRequestDispatcher("index.jsp");
