@@ -73,20 +73,8 @@
 
                 <div class="tags_bar">
                     <div class="tag">
-                        <i class="fas fa-times"></i>
-                        <span>Hot</span>
-                    </div>
-                    <div class="tag">
-                        <i class="fas fa-times"></i>
-                        <span>Coffeee</span>
-                    </div>
-                    <div class="tag">
-                        <i class="fas fa-times"></i>
-                        <span>What happen ?</span>
-                    </div>
-                    <div class="tag">
-                        <i class="fas fa-times"></i>
-                        <span>What Wrong ?</span>
+                        <i class='bx bxs-comment-add'></i>
+                        <span>Add Customer</span>
                     </div>
                 </div>
 

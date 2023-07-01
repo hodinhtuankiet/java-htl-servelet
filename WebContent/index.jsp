@@ -4,6 +4,8 @@
 		response.sendRedirect("login.jsp");
 	}
 %>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,7 +27,7 @@
 	href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
 	rel="stylesheet" type="text/css" />
 <!-- Core theme CSS (includes Bootstrap)-->
-<link href="/css/index-styles.css" rel="stylesheet" />
+<link href="css/index-styles.css" rel="stylesheet" />
 </head>
 <body id="page-top">
 	<!-- Navigation-->
@@ -62,7 +64,7 @@
 	<header style="background:url(./assets/img/hotel.jpg);background-size: cover;background-repeat: no-repeat;" class="masthead text-white text-center">
 		<div class="container d-flex align-items-center flex-column">
 			<!-- Masthead Avatar Image-->
-			<img class="masthead-avatar mb-5" src="./assets/img/avataaars.svg"
+			<img class="masthead-avatar mb-5" src="assets/img/avataaars.svg"
 				alt="..." />
 			<!-- Masthead Heading-->
 			<h1 class="masthead-heading text-uppercase mb-0">Welcome To My Hotel</h1>
@@ -387,15 +389,11 @@
 								<img class="img-fluid rounded mb-5"
 									src="assets/img/portfolio/room_planner_1.png" alt="..." />
 								<!-- Portfolio Modal - Text-->
-								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Mollitia neque assumenda ipsam nihil,
-									molestias magnam, recusandae quos quis inventore quisquam velit
-									asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-									itaque. Nam.</p>
-								<button class="btn btn-primary" href="#!"
-									data-bs-dismiss="modal">
-									<i class="fas fa-times fa-fw"></i> Close Window
-								</button>
+								<p class="mb-4">For room A-1, you will have 6 rooms including 2 living rooms
+								, 2 bedrooms, 1 office and a bathroom. </br> Besides, you will be served by staff 24/7 when you need help or advice  </p>
+								<a href="<%=request.getContextPath()%>/new" class="btn btn-primary" />
+  										<i class="fas fa-times fa-fw"></i> Book Room
+									</a>
 							</div>
 						</div>
 					</div>
@@ -431,15 +429,12 @@
 								<img class="img-fluid rounded mb-5"
 									src="assets/img/portfolio/aaaa.jpg" alt="..." />
 								<!-- Portfolio Modal - Text-->
-								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Mollitia neque assumenda ipsam nihil,
-									molestias magnam, recusandae quos quis inventore quisquam velit
-									asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-									itaque. Nam.</p>
-								<button class="btn btn-primary" href="#!"
-									data-bs-dismiss="modal">
-									<i class="fas fa-times fa-fw"></i> Close Window
-								</button>
+								<p class="mb-4">For room A-2, you will have 6 rooms including 2 living rooms
+								, 3 bedrooms, 1 office and a bathroom. </br> Besides,
+								 you will be served by staff 24/7 when you need help or advice.</p>
+								<a href="<%=request.getContextPath()%>/new" class="btn btn-primary" />
+  										<i class="fas fa-times fa-fw"></i> Book Room
+									</a>
 							</div>
 						</div>
 					</div>
@@ -475,15 +470,11 @@
 								<img class="img-fluid rounded mb-5"
 									src="assets/img/portfolio/b-1.jpg" alt="..." />
 								<!-- Portfolio Modal - Text-->
-								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Mollitia neque assumenda ipsam nihil,
-									molestias magnam, recusandae quos quis inventore quisquam velit
-									asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-									itaque. Nam.</p>
-								<button class="btn btn-primary" href="#!"
-									data-bs-dismiss="modal">
-									<i class="fas fa-times fa-fw"></i> Close Window
-								</button>
+								<p class="mb-4">For room B-1, you will have 4 rooms including 1 living rooms
+								, 1 bedrooms,1 balcony, 1 office and a bathroom. </br> Besides, you will be served by staff 24/7 when you need help or advice.</p>
+								<a href="<%=request.getContextPath()%>/new" class="btn btn-primary" />
+  										<i class="fas fa-times fa-fw"></i> Book Room
+									</a>
 							</div>
 						</div>
 					</div>
@@ -519,15 +510,11 @@
 								<img class="img-fluid rounded mb-5"
 									src="assets/img/portfolio/b-2.jpg" alt="..." />
 								<!-- Portfolio Modal - Text-->
-								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Mollitia neque assumenda ipsam nihil,
-									molestias magnam, recusandae quos quis inventore quisquam velit
-									asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-									itaque. Nam.</p>
-								<button class="btn btn-primary" href="#!"
-									data-bs-dismiss="modal">
-									<i class="fas fa-times fa-fw"></i> Close Window
-								</button>
+								<p class="mb-4">For room B-2, you will have 3 rooms including 1 living rooms
+								, 1 bedrooms, 1 office and a bathroom. </br> Besides, you will be served by staff 24/7 when you need help or advice.</p>
+								<a href="<%=request.getContextPath()%>/new" class="btn btn-primary" />
+  										<i class="fas fa-times fa-fw"></i> Book Room
+									</a>
 							</div>
 						</div>
 					</div>
@@ -563,15 +550,11 @@
 								<img class="img-fluid rounded mb-5"
 									src="assets/img/portfolio/c-1.png" alt="..." />
 								<!-- Portfolio Modal - Text-->
-								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Mollitia neque assumenda ipsam nihil,
-									molestias magnam, recusandae quos quis inventore quisquam velit
-									asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-									itaque. Nam.</p>
-								<button class="btn btn-primary" href="#!"
-									data-bs-dismiss="modal">
-									<i class="fas fa-times fa-fw"></i> Close Window
-								</button>
+								<p class="mb-4">For room C-1, you will have 3 rooms including 1 living rooms
+								, 1 bedrooms, 1 office and a bathroom. </br> Besides, you will be served by staff 24/7 when you need help or advice.</p>
+								<a href="<%=request.getContextPath()%>/new" class="btn btn-primary" />
+  										<i class="fas fa-times fa-fw"></i> Book Room
+									</a>
 							</div>
 						</div>
 					</div>
@@ -607,15 +590,13 @@
 								<img class="img-fluid rounded mb-5"
 									src="assets/img/portfolio/c-2.jpg" alt="..." />
 								<!-- Portfolio Modal - Text-->
-								<p class="mb-4">Lorem ipsum dolor sit amet, consectetur
-									adipisicing elit. Mollitia neque assumenda ipsam nihil,
-									molestias magnam, recusandae quos quis inventore quisquam velit
-									asperiores, vitae? Reprehenderit soluta, eos quod consequuntur
-									itaque. Nam.</p>
-								<button class="btn btn-primary" href="#!"
-									data-bs-dismiss="modal">
-									<i class="fas fa-times fa-fw"></i> Close Window
-								</button>
+								<p class="mb-4">For room B-2, you will have 2 rooms including 
+								 1 bedrooms, 1 office and a bathroom. </br> Besides, you will be served by staff 24/7 when you need help or advice.</p>
+									<a href="<%=request.getContextPath()%>/new" class="btn btn-primary" />
+  										<i class="fas fa-times fa-fw"></i> Book Room
+									</a>
+
+								
 							</div>
 						</div>
 					</div>
