@@ -62,7 +62,7 @@
 							<td><c:out value="${user.address}" /></td>
 							<td><c:out value="${user.phone}" /></td>
 							<td><c:out value="${user.room}" /></td>
-							<td><a href="edit?id=<c:out value='${user.id}' />">Edit</a>
+							<td><a href="edit?id=<c:out value='${user.id}'/>">Edit</a>
 								&nbsp;&nbsp;&nbsp;&nbsp; <a
 								href="delete?id=<c:out value='${user.id}' />">Delete</a></td>
 						</tr>

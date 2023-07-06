@@ -77,7 +77,7 @@ public class UserServlet extends HttpServlet {
 			throws SQLException, IOException, ServletException {
 		List<User> listUser = userDAO.selectAllUsers();
 		request.setAttribute("listUser", listUser);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("user-list.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("admin.jsp");
 		dispatcher.forward(request, response);
 	}
 	private void logout(HttpServletRequest request, HttpServletResponse response)
@@ -149,7 +149,7 @@ public class UserServlet extends HttpServlet {
 			{
 				if(uemail.equals("hodinhtuankiet@gmail.com"))
 				{
-					dispatcher = request.getRequestDispatcher("user-form.jsp");
+					dispatcher = request.getRequestDispatcher("form.jsp");
 				}else {
 					session.setAttribute("name", rs.getString("uname"));
 					dispatcher = request.getRequestDispatcher("index.jsp");
@@ -174,7 +174,7 @@ public class UserServlet extends HttpServlet {
 			throws SQLException, ServletException, IOException {
 		String id = request.getParameter("id");
 		User existingUser = userDAO.selectUser(id);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("user-form.jsp");
+		RequestDispatcher dispatcher = request.getRequestDispatcher("form.jsp");
 		request.setAttribute("user", existingUser);
 		dispatcher.forward(request, response);
 

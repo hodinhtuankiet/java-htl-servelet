@@ -211,15 +211,14 @@
 			<!-- About Section Content-->
 			<div class="row">
 				<div class="col-lg-4 ms-auto">
-					<p class="lead">Freelancer is a free bootstrap theme created by
-						Start Bootstrap. The download includes the complete source files
-						including HTML, CSS, and JavaScript as well as optional SASS
-						stylesheets for easy customization.</p>
+					<p class="lead">Our meticulously designed rooms and suites boast exquisite furnishings, plush bedding, 
+					and state-of-the-art amenities, ensuring a comfortable and memorable stay. 
+					Indulge your taste buds at our award-winning restaurants.</p>
 				</div>
 				<div class="col-lg-4 me-auto">
-					<p class="lead">You can create your own custom avatar for the
-						masthead, change the icon in the dividers, and add your email
-						address to the contact form to make it fully functional!</p>
+					<p class="lead">Our dedicated staff, renowned for their attentiveness and professionalism, 
+					are committed to
+					 providing an unparalleled level of hospitality, catering to your every need.</p>
 				</div>
 			</div>
 			<!-- About Section Button-->
@@ -328,13 +327,13 @@
 				<div class="col-lg-4 mb-5 mb-lg-0">
 					<h4 class="text-uppercase mb-4">Location</h4>
 					<p class="lead mb-0">
-						2215 John Daniel Drive <br /> Clark, MO 65243
+						101 Ngu Hanh Son District <br /> Da Nang Province
 					</p>
 				</div>
 				<!-- Footer Social Icons-->
 				<div class="col-lg-4 mb-5 mb-lg-0">
-					<h4 class="text-uppercase mb-4">Around the Web</h4>
-					<a class="btn btn-outline-light btn-social mx-1" href="#!"><i
+					<h4 class="text-uppercase mb-4">Contact Us</h4>
+					<a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/profile.php?id=100080159688790"><i
 						class="fab fa-fw fa-facebook-f"></i></a> <a
 						class="btn btn-outline-light btn-social mx-1" href="#!"><i
 						class="fab fa-fw fa-twitter"></i></a> <a
@@ -345,10 +344,10 @@
 				</div>
 				<!-- Footer About Text-->
 				<div class="col-lg-4">
-					<h4 class="text-uppercase mb-4">About Freelancer</h4>
+					<h4 class="text-uppercase mb-4">About Hotel</h4>
 					<p class="lead mb-0">
-						Freelance is a free to use, MIT licensed Bootstrap theme created
-						by <a href="http://startbootstrap.com">Start Bootstrap</a> .
+						A hotel is a commercial establishment that provides 
+						temporary accommodation, and other related services to travelers and guests.
 					</p>
 				</div>
 			</div>
@@ -357,7 +356,7 @@
 	<!-- Copyright Section-->
 	<div class="copyright py-4 text-center text-white">
 		<div class="container">
-			<small>Copyright &copy; Your Website 2021</small>
+			<small>Hotel &copy; Tuan Kiet Welcome</small>
 		</div>
 	</div>
 	<!-- Portfolio Modals-->

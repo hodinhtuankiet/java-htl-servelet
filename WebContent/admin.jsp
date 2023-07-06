@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -74,7 +75,8 @@
                 <div class="tags_bar">
                     <div class="tag">
                         <i class='bx bxs-comment-add'></i>
-                        <span>Add Customer</span>
+                        <a href="<%=request.getContextPath()%>/new" class="btn btn-success">Add
+					New User</a>
                     </div>
                 </div>
 
@@ -84,78 +86,36 @@
                     </p>
                 </div>
 
-                
-                <div class="job_card">
-                    <div class="job_details">
-                        <div class="img">
-                            <img style="width: 45px;height: 72px;" src="./css/user.png" alt=""> <br>
-                        </div>
-                        <div class="text">
-                            <h2>Name</h2>
-                            <span>Address</span> <br>
-                            <span>Numberphone</span> <br>
-                            <span>Payment</span> <br>
-                            <span>SL:X1</span>
-                        </div>
-                    </div>
-                    <div class="job_salary">
-                        <h4>{{this.price}}</h4>
-                        <span>{{this.time}}</span> <br>
-                        <span>{{this.email}}</span> <br> <br>
-                        <a href="/manager/{{this._id}}/edit" class="buton-edit"><i class='bx bxs-edit'>Update</i></a>
-                        <a class="buton-delete" data-id="{{this._id}}"><i class='bx bxs-message-square-x'>Delete</i></a>
-                    </div>
-                    <div class="delete_form">
-                        <p>Do you want to delete this person??</p>
-                        <button class="btn-delete-confirm">Delete</button>
-                        <button class="btn-delete-cancel">Cancel</button>
-                    </div>
-                </div>
-               
+                <c:forEach var="user" items="${listUser}">
+    <div class="job_card">
+        <div class="job_details">
+            <div class="img">
+                <img style="width: 45px;height: 72px;" src="./css/user.png" alt=""> <br>
+            </div>
+
+            <tr>
+                <td><c:out value="${user.id}" /></td>
+                <td><c:out value="${user.name}" /></td>
+                <td><c:out value="${user.email}" /></td>
+                <td><c:out value="${user.address}" /></td>
+                <td><c:out value="${user.phone}" /></td>
+                <td><c:out value="${user.room}" /></td>
+            </tr>
+        </div>
+        <div class="job_salary">
+            <h4>{{this.price}}</h4>
+            <span>{{this.time}}</span> <br>
+            <span>{{this.email}}</span> <br> <br>
+			<a href="edit?id=<c:out value='${user.id}'/>" class="buton-edit"><i class='bx bxs-edit'></i>Update</a>
+            <a href="delete?id=<c:out value='${user.id}' />"  class="buton-delete"><i class='bx bxs-message-square-x'></i>Delete</a>
+        </div>
+    </div>
+</c:forEach>
+
             </div>
         </section>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        const usersCount = {{ users.length }};
-        document.getElementById('usersCount').textContent = usersCount;
-
-        const deleteButtons = document.querySelectorAll('.buton-delete');
-        deleteButtons.forEach(button => {
-            const userId = button.dataset.id;
-            button.addEventListener('click', () => {
-                const userCard = button.closest('.job_card');
-                const deleteForm = userCard.querySelector('.delete_form');
-
-                if (userCard && deleteForm) {
-                    deleteForm.classList.add('active');
-
-                    // Delete button event listener
-                    const btnDeleteConfirm = deleteForm.querySelector('.btn-delete-confirm');
-                    btnDeleteConfirm.addEventListener('click', () => {
-                        axios.delete(`/admin/${userId}`)
-                            .then(response => {
-                                if (response.status === 200) {
-                                    console.log('Tài khoản đã được xóa');
-                                    userCard.remove();
-                                } else {
-                                    console.error('Lỗi khi xóa tài khoản');
-                                }
-                            })
-                            .catch(error => {
-                                console.error('Lỗi khi xóa tài khoản:', error);
-                            });
-                    });
-
-                    // Cancel button event listener
-                    const btnDeleteCancel = deleteForm.querySelector('.btn-delete-cancel');
-                    btnDeleteCancel.addEventListener('click', () => {
-                        deleteForm.classList.remove('active');
-                    });
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>

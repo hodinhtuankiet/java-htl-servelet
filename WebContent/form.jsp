@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +20,7 @@
         <nav>
             <div class="navbar">
                 <div class="logo">
-                    <img src="/img/author/Rectangle58.jpg" alt="">
+                    <img src="./css/Rectangle58.jpg" alt="">
                     <h1>Admin</h1>
                 </div>
                 <ul>
@@ -57,8 +59,15 @@
                 <p>The K&L Corner Coffee!</p>
             </div>
             <div class="main-body">
-                <h1>Edit Customers</h1>
-
+            	
+            		<h1>
+						<c:if test="${user != null}">
+            			Edit Customers
+            		</c:if>
+						<c:if test="${user == null}">
+            			Add New Customers
+            		</c:if>
+					</h1>
                 <div class="search_bar">
                     <input type="search" placeholder="Search name customer here...">
                 </div>
@@ -81,32 +90,37 @@
                         <span>What Wrong ?</span>
                     </div>
                 </div>
-                    <form method="POST" action="/manager/{{users._id}}?_method=PUT">
+		                <c:if test="${user != null}">
+							<form action="update" method="post">
+						</c:if>
+						<c:if test="${user == null}">
+							<form action="insert" method="post">
+						</c:if>
                         <div class="edit">
                             <div class="row_2">
                                 <label for="">User Name:</label>
-                                <input value="{{users.username}}" type="text" id="username" name="username">
+                                <input value="<c:out value='${user.name}' />" type="text" id="username" name="name" required="required" >
                             </div>
                             <div class="row_2">
                                 <label for="">Email:</label>
-                                <input value="{{users.email}}" type="text" id="email" name="email">
+                                <input value="<c:out value='${user.email}' />" type="text" id="email" name="email" required="required">
                             </div>
                             <div class="row_2">
                                 <label for="">Address:</label>
-                                <input value="{{users.address}}" type="text" id="address" name="address">
+                                <input value="<c:out value='${user.address}' />" type="text" id="address" name="address" required="required">
                             </div>
 
                             <div class="row_2">
-                                <label for="">Payment:</label>
-                                <input value="{{users.payment}}" type="text" id="payment" name="payment">
+                                <label for="">User phone:</label>
+                                <input value="<c:out value='${user.phone}' />" type="text" id="phone" name="phone" required="required">
                             </div>
 
                             <div class="row_2">
-                                <label for="">Time:</label>
-                                <input value="{{users.time}}" type="text" id="time" name="time">
+                                <label for="">User room:</label>
+                                <input value="<c:out value='${user.room}' />" type="text" id="room" name="room" required="required">
                             </div>
                             <div class="event">
-                                <button>Update</button>
+                                <button type="submit"  >Update</button>
                             </div>
                         </div>
                     </form>
