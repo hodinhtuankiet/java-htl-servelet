@@ -17,6 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.xadmin.usermanagement.dao.USerDAO;
+import com.xadmin.usermanagement.model.Account;
 import com.xadmin.usermanagement.model.User;
 
 @WebServlet("/")
@@ -49,6 +50,9 @@ public class UserServlet extends HttpServlet {
 			case "/delete":
 				deleteUser(request, response);
 				break;
+			case "/delete_account":
+				deleteAccount(request, response);
+				break;
 			case "/edit":
 				showEditForm(request, response);
 				break;
@@ -58,11 +62,14 @@ public class UserServlet extends HttpServlet {
 			case "/Logout":
 				logout(request, response);
 				break;
-			case "/login":
+			case "/Login":
 				login(request, response);
 				break;
 			case "/register":
 				register(request, response);
+				break;
+			case "/account":
+				account(request, response);
 				break;
 			default:
 				listUser(request, response);
@@ -80,6 +87,14 @@ public class UserServlet extends HttpServlet {
 		RequestDispatcher dispatcher = request.getRequestDispatcher("admin.jsp");
 		dispatcher.forward(request, response);
 	}
+	private void account(HttpServletRequest request, HttpServletResponse response)
+			throws SQLException, IOException, ServletException {
+		List<Account> listUser = userDAO.selectAllUser();
+		request.setAttribute("listUser", listUser);
+		RequestDispatcher dispatcher = request.getRequestDispatcher("Account.jsp");
+		dispatcher.forward(request, response);
+	}
+	
 	private void logout(HttpServletRequest request, HttpServletResponse response)
 			throws SQLException, IOException, ServletException {
 		HttpSession session = request.getSession();
@@ -211,7 +226,13 @@ public class UserServlet extends HttpServlet {
 		String id = request.getParameter("id");
 		userDAO.deleteUser(id);
 		response.sendRedirect("list");
-
+	}
+	
+	private void deleteAccount(HttpServletRequest request, HttpServletResponse response) 
+			throws SQLException, IOException {
+		String uemail = request.getParameter("uemail");
+		userDAO.deleteAccount(uemail);
+		response.sendRedirect("account");
 	}
 
 }

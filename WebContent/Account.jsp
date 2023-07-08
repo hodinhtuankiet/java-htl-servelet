@@ -1,36 +1,36 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+    
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <title>Account</title>
-
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <link rel="stylesheet" href="css/admin.css" />
-  <!-- Font Awesome Cdn Link -->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<body>
+<body style="background:url(./assets/img/hotel.jpg);background-size: cover;background-repeat: no-repeat;">
   <div class="container">
     <nav>
       <div class="navbar">
         <div class="logo">
-          <img src="./img/author/Rectangle58.jpg" alt="">
+		<img src="./css/Rectangle58.jpg" alt="">
           <h1>Admin</h1>
         </div>
         <ul>
-          <li><a id="active" href="admin.jsp">
+           <li><a id="active" href="list">
                             <i class="fas fa-tasks"></i>
-                            <span class="nav-item">Client</span>
+                            <span class="nav-item">Customer</span>
                         </a>
                     </li>
-                    <li><a href="Account.jsp">
+                    <li><a href="account">
                             <i class="fas fa-user"></i>
                             <span class="nav-item">Account</span>
                         </a>
@@ -71,25 +71,21 @@
           </p>
         </div>
 
-        {{#each users}}
+        <c:forEach var="user" items="${listUser}">
         <div class="job_card">
           <div class="job_details">
             <div class="img">
-              {{#if this.image}}
-              <img style="border-radius: 50%;" src="{{this.image}}" alt="">
-              {{else}}
-              <img src="../img/author/user.png" alt="">
-              {{/if}}
+              <img src="assets/img/hotel.jpg" alt="">
             </div>
             <div class="text">
-              <h2>{{this.username}}</h2>
-              <span>Password:{{this.password}}</span>
+              <h2><c:out value="Name: ${user.uname}" /></h2>
+              <span><c:out value="Email: ${user.uemail}" /></span>
             </div>
           </div>
           <div class="job_salary">
-            <h4>Role:{{this.role}}</h4>
-            <span>Created At:{{this.createdAt}}</span>
-            <a class="buton-delete" data-id="{{this._id}}">Delete</a>
+            <h4><c:out value="Password: ${user.upassword}" /></h4>
+            <span><c:out value="Contact: ${user.ucontact}" /></span>
+			<a href="delete_account?id=<c:out value='${URLEncoder.encode(user.uemail, "UTF-8")}' />" class="buton-delete">Delete</a>
           </div>
 
           <div class="delete_form">
@@ -99,7 +95,7 @@
           </div>
 
         </div>
-        {{/each}}
+         </c:forEach>
       </div>
 
   </div>

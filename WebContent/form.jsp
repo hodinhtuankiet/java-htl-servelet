@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 
-<body>
+<body style="background:url(assets/img/hotel.jpg);background-size: cover;background-repeat: no-repeat;">
     <div class="container">
         <nav>
             <div class="navbar">
@@ -24,12 +24,12 @@
                     <h1>Admin</h1>
                 </div>
                 <ul>
-                    <li><a id="active" href="admin.jsp">
+                    <li><a id="active" href="list">
                             <i class="fas fa-tasks"></i>
-                            <span class="nav-item">Client</span>
+                            <span class="nav-item">Customer</span>
                         </a>
                     </li>
-                    <li><a href="Account.jsp">
+                    <li><a href="account">
                             <i class="fas fa-user"></i>
                             <span class="nav-item">Account</span>
                         </a>
@@ -96,6 +96,11 @@
 						<c:if test="${user == null}">
 							<form action="insert" method="post">
 						</c:if>
+						
+						<c:if test="${user != null}">
+						<input type="hidden" name="id" value="<c:out value='${user.id}' />" />
+						</c:if>
+						
                         <div class="edit">
                             <div class="row_2">
                                 <label for="">User Name:</label>

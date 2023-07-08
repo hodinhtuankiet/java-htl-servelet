@@ -8,6 +8,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.xadmin.usermanagement.model.Account;
 import com.xadmin.usermanagement.model.User;
 
 
@@ -23,9 +24,16 @@ public class USerDAO {
 	
 	private static final String SELECT_ALL_CLIENT =  "select * from customer";
 	
+	private static final String SELECT_ALL_USERS =  "select * from users";
+
+	
 	private static final String DELETE_CLIENT_SQL =  "delete from customer where id= ?";
 	
+	private static final String DELETE_USERS_SQL =  "delete from users where uemail= ?";
+
+	
 	private static final String UPDATE_CLIENT_SQL =  "update customer set name=?,email=?,address=?,phone=?,room=? where id=?;";
+	
 	public USerDAO() {
 	}
 
@@ -106,12 +114,42 @@ public class USerDAO {
 		}
 		return users;
 	}
+	public List<Account> selectAllUser() {
+
+		List<Account> Account = new ArrayList<>();
+		try (Connection connection = getConnection();
+
+			PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_USERS);) {
+			System.out.println(preparedStatement);
+			ResultSet rs = preparedStatement.executeQuery();
+
+			while (rs.next()) {
+				String name = rs.getString("uname");
+				String email = rs.getString("uemail");
+				String address = rs.getString("upassword");
+				String phone = rs.getString("ucontact");
+				Account.add(new Account(name, email, address, phone));
+			}
+		} catch (SQLException e) {
+			printSQLException(e);
+		}
+		return Account;
+	}
 
 	public boolean deleteUser(String id) throws SQLException {
 		boolean rowDeleted;
 		try (Connection connection = getConnection();
 				PreparedStatement statement = connection.prepareStatement(DELETE_CLIENT_SQL);) {
 			statement.setString(1, id);
+			rowDeleted = statement.executeUpdate() > 0;
+		}
+		return rowDeleted;
+	}
+	public boolean deleteAccount(String uemail) throws SQLException {
+		boolean rowDeleted;
+		try (Connection connection = getConnection();
+				PreparedStatement statement = connection.prepareStatement(DELETE_USERS_SQL);) {
+			statement.setString(1, uemail);
 			rowDeleted = statement.executeUpdate() > 0;
 		}
 		return rowDeleted;

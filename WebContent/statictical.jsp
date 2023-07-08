@@ -26,12 +26,12 @@
                     <h1>Admin</h1>
                 </div>
                 <ul>
-                    <li><a id="active" href="admin.jsp">
+                   <li><a id="active" href="list">
                             <i class="fas fa-tasks"></i>
-                            <span class="nav-item">Client</span>
+                            <span class="nav-item">Customer</span>
                         </a>
                     </li>
-                    <li><a href="Account.jsp">
+                    <li><a href="account">
                             <i class="fas fa-user"></i>
                             <span class="nav-item">Account</span>
                         </a>

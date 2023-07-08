@@ -64,7 +64,7 @@
 	<header style="background:url(./assets/img/hotel.jpg);background-size: cover;background-repeat: no-repeat;" class="masthead text-white text-center">
 		<div class="container d-flex align-items-center flex-column">
 			<!-- Masthead Avatar Image-->
-			<img class="masthead-avatar mb-5" src="assets/img/avataaars.svg"
+			<img class="masthead-avatar mb-5" src="assets/img/portfolio/avataaars.svg" 
 				alt="..." />
 			<!-- Masthead Heading-->
 			<h1 class="masthead-heading text-uppercase mb-0">Welcome To My Hotel</h1>
