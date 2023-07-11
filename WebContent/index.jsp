@@ -4,8 +4,6 @@
 		response.sendRedirect("login.jsp");
 	}
 %>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +25,7 @@
 	href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
 	rel="stylesheet" type="text/css" />
 <!-- Core theme CSS (includes Bootstrap)-->
-<link href="css/index-styles.css" rel="stylesheet" />
+<link href="/UserManagement/css/index-styles.css" rel="stylesheet" />
 </head>
 <body id="page-top">
 	<!-- Navigation-->
@@ -195,7 +193,8 @@
 		</div>
 	</section>
 	<!-- About Section-->
-	<section class="page-section bg-primary text-white mb-0" id="about">
+	<section style="background:url(./assets/img/dddd.jpg);background-size: cover;background-repeat: no-repeat;"
+	 class="page-section bg-primary text-white mb-0" id="about">
 		<div class="container">
 			<!-- About Section Heading-->
 			<h2
@@ -231,7 +230,7 @@
 		</div>
 	</section>
 	<!-- Contact Section-->
-	<section class="page-section" id="contact">
+	<section  class="page-section" id="contact">
 		<div class="container">
 			<!-- Contact Section Heading-->
 			<h2
@@ -248,13 +247,6 @@
 			<!-- Contact Section Form-->
 			<div class="row justify-content-center">
 				<div class="col-lg-8 col-xl-7">
-					<!-- * * * * * * * * * * * * * * *-->
-					<!-- * * SB Forms Contact Form * *-->
-					<!-- * * * * * * * * * * * * * * *-->
-					<!-- This form is pre-integrated with SB Forms.-->
-					<!-- To make this form functional, sign up at-->
-					<!-- https://startbootstrap.com/solution/contact-forms-->
-					<!-- to get an API token!-->
 					<form id="contactForm" data-sb-form-api-token="API_TOKEN">
 						<!-- Name input-->
 						<div class="form-floating mb-3">
@@ -299,8 +291,6 @@
 						<div class="d-none" id="submitSuccessMessage">
 							<div class="text-center mb-3">
 								<div class="fw-bolder">Form submission successful!</div>
-								To activate this form, sign up at <br /> <a
-									href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
 							</div>
 						</div>
 						<!-- Submit error message-->
@@ -390,7 +380,7 @@
 								<!-- Portfolio Modal - Text-->
 								<p class="mb-4">For room A-1, you will have 6 rooms including 2 living rooms
 								, 2 bedrooms, 1 office and a bathroom. </br> Besides, you will be served by staff 24/7 when you need help or advice  </p>
-								<a href="<%=request.getContextPath()%>/new" class="btn btn-primary" />
+								<a href="new" class="btn btn-primary" />
   										<i class="fas fa-times fa-fw"></i> Book Room
 									</a>
 							</div>
@@ -603,15 +593,29 @@
 			</div>
 		</div>
 	</div>
-	<!-- Bootstrap core JS-->
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-	<!-- Core theme JS-->
 	<script src="js/scripts.js"></script>
-	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-	<!-- * *                               SB Forms JS                               * *-->
-	<!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-	<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
 	<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+	<script src="https://smtpjs.com/v3/smtp.js">
+	<script>
+        var btn = document.getElementById("submitButton");
+        btn.addEventListener('click', () => {
+            console.log("hii");
+            var name_customer = document.getElementById("name").value;
+            var email_customer = document.getElementById("email").value;
+            var message_customer = document.getElementById("phone").value;
+            var body = "Name: " + name_customer + "<br/> Email:" + email_customer + "<br/> Message: " + message_customer;
+            Email.send({
+                SecureToken: "df3a101f-3345-425a-b2d7-8c79a1523065",
+                To: 'hodinhtuankiet@gmail.com',
+                From: "kiethdt.22ite@vku.udn.vn",
+                Subject: "The Tuan Kiet Website Hotel-Message-Customer",
+                Body: body
+            }).then(
+                message => alert("Thanks you for feedback")
+            );
+        })
+    </script>
 </body>
 </html>

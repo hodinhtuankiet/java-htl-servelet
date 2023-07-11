@@ -32,8 +32,8 @@ public class USerDAO {
 	private static final String DELETE_USERS_SQL =  "delete from users where uemail= ?";
 
 	
-	private static final String UPDATE_CLIENT_SQL =  "update customer set name=?,email=?,address=?,phone=?,room=? where id=?;";
-	
+	private static final String UPDATE_CLIENT_SQL = "update customer set name = ?, address =?, phone= ?, room= ? where email = ?;";
+
 	public USerDAO() {
 	}
 
@@ -156,19 +156,18 @@ public class USerDAO {
 	}
 
 	public boolean updateUser(User client) throws SQLException {
-		boolean rowUpdated;
-		try (Connection connection = getConnection();
-				PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_CLIENT_SQL);) {
-			preparedStatement.setString(1, client.getName());
-			preparedStatement.setString(2, client.getEmail());
-			preparedStatement.setString(3, client.getAddress());
-			preparedStatement.setString(4, client.getPhone());
-			preparedStatement.setString(5, client.getRoom());
-			preparedStatement.setString(6, client.getId());
+	    boolean rowUpdated;
+	    try (Connection connection = getConnection();
+	         PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_CLIENT_SQL);) {
+	        preparedStatement.setString(1, client.getName());
+	        preparedStatement.setString(2, client.getAddress());
+	        preparedStatement.setString(3, client.getPhone());
+	        preparedStatement.setString(4, client.getRoom());
+	        preparedStatement.setString(5, client.getEmail());
 
-			rowUpdated = preparedStatement.executeUpdate() > 0;
-		}
-		return rowUpdated;
+	        rowUpdated = preparedStatement.executeUpdate() > 0;
+	    }
+	    return rowUpdated;
 	}
 
 	private void printSQLException(SQLException ex) {

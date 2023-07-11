@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="css/billboard.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    <!-- Font Awesome Cdn Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -58,10 +57,10 @@
 
         <section class="main">
             <div class="main-top">
-                <p>The K&L Corner Coffee!</p>
+                <p>Tuan Kiet Hotel</p>
             </div>
             <div class="main-body">
-                <h1>Recent Jobs</h1>
+                <h1>Recent Customer</h1>
 
                 <div class="search_bar">
                     <input type="search" placeholder="Search name customer here...">
@@ -112,8 +111,8 @@
                         x: "trucx",
                         columns: [
                             ["trucx", "1.2023", "2.2023", "3.2023", "4.2023", "5.2023", "6.2023"],
-                            ["Đơn Hàng", 12, 70, 50, 60, 5, 15],
-                            ["Tài Khoản", 5, 11, 22, 63, 45, 3,],
+                            ["Customer", 12, 70, 50, 60, 5, 15],
+                            ["Account", 5, 11, 22, 63, 45, 3,],
                         ]
                     }
                 })

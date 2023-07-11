@@ -386,7 +386,9 @@ h1 {
     flex-direction: column;
     justify-content: space-around;
 }
-
+.tag a {
+	color: red;
+}
 .row_2 input {
     width: 100%;
     /* height: 40px; */
@@ -396,17 +398,21 @@ h1 {
     border: 1px solid rgb(89 87 87);
     margin-top: 10px;
     background-color: transparent;
-    color: white;
+    color: red;
 }
 .row_2 select {
-    width: 100%;
-    font-size: 17px;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid rgb(220, 213, 213);
-    margin-top: 10px;
-    background-color: transparent;
-    color: white;
+width: 100%;
+								    font-size: 17px;
+								    padding: 10px;
+								    border-radius: 5px;
+								    border: 1px solid black;
+								    margin-top: 10px;
+								    background-color: transparent;
+								    color: black
+}
+.row_2 label {
+	color: white;
+    font-weight: 600;
 }
 .row_2 input:hover {
     border: 1px solid rgb(176, 55, 55);

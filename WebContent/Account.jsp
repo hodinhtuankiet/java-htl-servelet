@@ -9,14 +9,14 @@
   <title>Account</title>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <link rel="stylesheet" href="css/admin.css" />
+    <link rel="stylesheet" href="css/admin3.css" />
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<body style="background:url(./assets/img/hotel.jpg);background-size: cover;background-repeat: no-repeat;">
+<body style="background:url(./assets/img/tk.jpg);background-size: cover;background-repeat: no-repeat;">
   <div class="container">
     <nav>
       <div class="navbar">
@@ -75,7 +75,7 @@
         <div class="job_card">
           <div class="job_details">
             <div class="img">
-              <img src="assets/img/hotel.jpg" alt="">
+              <img src="assets/img/avataaars.svg" alt="">
             </div>
             <div class="text">
               <h2><c:out value="Name: ${user.uname}" /></h2>
@@ -85,7 +85,8 @@
           <div class="job_salary">
             <h4><c:out value="Password: ${user.upassword}" /></h4>
             <span><c:out value="Contact: ${user.ucontact}" /></span>
-			<a href="delete_account?id=<c:out value='${URLEncoder.encode(user.uemail, "UTF-8")}' />" class="buton-delete">Delete</a>
+			<a href="delete_account?uemail=<c:out value='${user.uemail}' />" class="buton-delete">Delete</a>
+			
           </div>
 
           <div class="delete_form">

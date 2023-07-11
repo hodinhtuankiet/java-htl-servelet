@@ -20,37 +20,9 @@
         <nav>
             <div class="navbar">
                 <div class="logo">
-                    <img src="./css/Rectangle58.jpg" alt="">
-                    <h1>Admin</h1>
+                    <img src="assets/img/user.png" alt="">
+                    <h1>Customer</h1>
                 </div>
-                <ul>
-                    <li><a id="active" href="list">
-                            <i class="fas fa-tasks"></i>
-                            <span class="nav-item">Customer</span>
-                        </a>
-                    </li>
-                    <li><a href="account">
-                            <i class="fas fa-user"></i>
-                            <span class="nav-item">Account</span>
-                        </a>
-                    </li>
-                    <li><a href="index.jsp">
-                            <i class="fab fa-dochub"></i>
-                            <span class="nav-item">My Website</span>
-                        </a>
-                    </li>
-                    <li><a href="statictical.jsp">
-                            <i class='bx bx-line-chart'></i>
-                            <span class="nav-item">Statistical</span>
-                        </a>
-                    </li>
-           
-                    <li><a href="login.jsp" class="logout">
-                            <i class="fas fa-sign-out-alt"></i>
-                            <span class="nav-item">Logout</span>
-                        </a>
-                    </li>
-                </ul>
             </div>
         </nav>
 
@@ -94,7 +66,7 @@
 							<form action="update" method="post">
 						</c:if>
 						<c:if test="${user == null}">
-							<form action="insert" method="post">
+							<form action="insert2" method="post">
 						</c:if>
 						
 						<c:if test="${user != null}">

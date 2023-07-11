@@ -45,8 +45,8 @@ nav {
     bottom: 0;
     width: 280px;
     height: 110vh;
-    background: rgba(96, 59, 3, 0.2);
-}
+	background: rgb(75 71 66 / 50%);
+	}
 
 .navbar {
     width: 80%;
@@ -223,7 +223,7 @@ h1 {
     padding: 15px;
     display: flex;
     border-radius: 10px;
-    background: rgb(75 71 66 / 75%);
+   	background: rgb(75 71 66 / 50%);
     margin-bottom: 15px;
     justify-content: space-between;
     border: 2px solid rgb(190, 190, 190);
@@ -393,21 +393,12 @@ h1 {
     font-size: 17px;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid rgb(89 87 87);
-    margin-top: 10px;
-    background-color: transparent;
-    color: white;
-}
-.row_2 select {
-    width: 100%;
-    font-size: 17px;
-    padding: 10px;
-    border-radius: 5px;
     border: 1px solid rgb(220, 213, 213);
     margin-top: 10px;
     background-color: transparent;
     color: white;
 }
+
 .row_2 input:hover {
     border: 1px solid rgb(176, 55, 55);
 }

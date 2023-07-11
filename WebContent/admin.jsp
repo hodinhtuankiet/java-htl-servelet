@@ -6,13 +6,12 @@
 <head>
     <title>ADMIN</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="css/admin.css" />
+<link rel="stylesheet" href="css/admin3.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- Font Awesome Cdn Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 </head>
 
-<body style="background:url(./assets/img/hotel.jpg);background-size: cover;background-repeat: no-repeat;">
+<body style="background:url(./assets/img/hotel3.jfif);background-size: cover;background-repeat: no-repeat;">
     <div class="container">
         <nav>
             <div class="navbar">
@@ -73,7 +72,7 @@
                 <div class="tags_bar">
                     <div class="tag" style="color: black;font-size: 15px;">
                     	<i class='bx bx-plus-medical'></i>
-                        <a href="<%=request.getContextPath()%>/new" class="btn btn-success">Add New User</a>
+                        <a href="<%=request.getContextPath()%>/new2" class="btn btn-success">Add New User</a>
                     </div>
                 </div>
 
@@ -84,58 +83,74 @@
                 <c:forEach var="user" items="${listUser}">
                     <div class="job_card">
                         <div class="job_details">
-                        
                         <c:choose>
                  <c:when test="${user.room == 'A-1'}">
                     <div class="img">
-                        <img style="width: 65px;height: 80px;margin-right:15px" src="./assets/img/portfolio/aaaa.jpg" alt="">
+                        <img style="width: 65px;height: 80px;margin-right:25px" src="./assets/img/portfolio/aaaa.jpg" alt="">
                     </div>
                 </c:when>
                 <c:when test="${user.room == 'A-2'}">
                     <div class="img">
-                        <img style="width: 65px;height: 80px;margin-right:15px" src="./assets/img/portfolio/a-22.jpg" alt="">
+                        <img style="width: 65px;height: 80px;margin-right:25px" src="./assets/img/portfolio/a-22.png" alt="">
                     </div>
                 </c:when>
                 <c:when test="${user.room == 'C-1'}">
                     <div class="img">
-                        <img style="width: 65px;height: 80px;margin-right:15px" src="./assets/img/portfolio/c-1.jpg" alt="">
+                        <img style="width: 65px;height: 80px;margin-right:25px" src="./assets/img/portfolio/c-1.png" alt="">
                     </div>
                 </c:when>
                 <c:when test="${user.room == 'C-2'}">
                     <div class="img">
-                        <img style="width: 65px;height: 80px;margin-right:15px" src="./assets/img/portfolio/c-2.jpg" alt="">
+                        <img style="width: 65px;height: 80px;margin-right:25px" src="./assets/img/portfolio/c-2.jpg" alt="">
                     </div>
                 </c:when>
                 <c:when test="${user.room == 'B-1'}">
                     <div class="img">
-                        <img style="width: 65px;height: 80px;margin-right:15px" src="./assets/img/portfolio/b-1.jpg" alt="">
+                        <img style="width: 65px;height: 80px;margin-right:25px" src="./assets/img/portfolio/b-1.jpg" alt="">
                     </div>
                 </c:when>
                 <c:when test="${user.room == 'B-2'}">
                     <div class="img">
-                        <img style="width: 65px;height: 80px;margin-right:15px" src="./assets/img/portfolio/b-2.jpg" alt="">
+                        <img style="width: 65px;height: 80px;margin-right:25px" src="./assets/img/portfolio/b-2.jpg" alt="">
                     </div>
                 </c:when>
                 <c:otherwise>
                     <div class="img">
-                        <img style="width: 65px;height: 80px;margin-right:15px" src="./assets/img/portfolio/b-1.jpg" alt="">
+                        <img style="width: 65px;height: 80px;margin-right:25px" src="./assets/img/portfolio/b-1.jpg" alt="">
                     </div>
                 </c:otherwise>
-            </c:choose>
-
-                            <div style="color: white;font-size: 17px;font-weight: 500">
+            	</c:choose>
+                          <div style="color: white;font-size: 17px;font-weight: 500">
                                 <p><c:out value="STT: ${user.id}" /></p>
                                 <p><c:out value="Name: ${user.name}" /></p>
                                 <p><c:out value="Email: ${user.email}" /></p>
                                 <p><c:out value="Address: ${user.address}" /></p>
                                 <p><c:out value="Phone: ${user.phone}" /></p>
-                                <p><c:out value="Room: ${user.room}" /></p>
-                            </div>
+                          </div>
                         </div>
                         <div class="job_salary">
-                            <h4>{{this.price}}</h4>
-                            <span>{{this.time}}</span> <br>
-                            <span>{{this.email}}</span> <br> <br>
+                            <h4><c:out value="Room: ${user.room}"/></h4>
+				            <c:choose>
+							<c:when test="${user.room == 'A-1'}">
+                    		<span>1.000.000d</span> <br>
+                			</c:when>
+                			<c:when test="${user.room == 'A-2'}">
+                    		<span>1.500.000d</span> <br>
+                			</c:when>
+                			<c:when test="${user.room == 'B-1'}">
+                    		<span>800.000d</span> <br>
+                			</c:when>
+                			<c:when test="${user.room == 'B-2'}">
+                    		<span>600.000d</span> <br>
+                			</c:when>
+                			<c:when test="${user.room == 'C-1'}">
+                    		<span>500.000d</span> <br>
+                			</c:when>
+                			<c:when test="${user.room == 'C-2'}">
+                    		<span>400.000d</span> <br>
+                			</c:when>
+                			</c:choose>
+                            <span></span> <br> <br>
                             <a href="edit?id=<c:out value='${user.id}'/>" class="buton-edit"><i class='bx bxs-edit'></i>Update</a>
                             <a href="delete?id=<c:out value='${user.id}' />"  class="buton-delete"><i class='bx bxs-message-square-x'></i>Delete</a>
                         </div>

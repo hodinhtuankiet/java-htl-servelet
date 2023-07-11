@@ -56,10 +56,9 @@
 
         <section class="main">
             <div class="main-top">
-                <p>Tuan Kiet Hotel</p>
+                <p>The K&L Corner Coffee!</p>
             </div>
             <div class="main-body">
-            	
             		<h1>
 						<c:if test="${user != null}">
             			Edit Customers
@@ -90,58 +89,51 @@
                         <span>What Wrong ?</span>
                     </div>
                 </div>
-		                <c:if test="${user != null}">
-							<form action="update" method="post">
-						</c:if>
-						<c:if test="${user == null}">
-							<form action="insert" method="post">
-						</c:if>
-						
-						<c:if test="${user != null}">
-						<input type="hidden" name="id" value="<c:out value='${user.id}' />" />
-						</c:if>
-						
-                        <div class="edit">
-                            <div class="row_2">
-                                <label  for="">User Name:</label>
-                                <input style="color: black" value="<c:out value='${user.name}' />" type="text" id="username" name="name" required="required" >
-                            </div>
-                            <div class="row_2">
-                                <label for="">Email:</label>
-                                <input style="color: black" value="<c:out value='${user.email}' />" type="text" id="email" name="email" required="required">
-                            </div>
-                            <div class="row_2">
-                                <label for="">Address:</label>
-                                <input style="color: black" value="<c:out value='${user.address}' />" type="text" id="address" name="address" required="required">
-                            </div>
+				<form action="update" method="post">
+    <c:if test="${user != null}">
+        <input type="hidden" name="id" value="<c:out value='${user.id}' />" />
+    </c:if>
+    
+    <div class="edit">
+        <div class="row_2">
+            <label for="">User Name:</label>
+            <input style="color: black" value="<c:out value='${user.name}' />" type="text" id="username" name="name" required="required">
+        </div>
+        <div class="row_2">
+            <label for="">Email:</label>
+            <input style="color: black" value="<c:out value='${user.email}' />" type="text" id="email" name="email" required="required">
+        </div>
+        <div class="row_2">
+            <label for="">Address:</label>
+            <input style="color: black" value="<c:out value='${user.address}' />" type="text" id="address" name="address" required="required">
+        </div>
 
-                            <div class="row_2">
-                                <label for="">User phone:</label>
-                                <input style="color: black" value="<c:out value='${user.phone}' />" type="text" id="phone" name="phone" required="required">
-                            </div>
+        <div class="row_2">
+            <label for="">User phone:</label>
+            <input style="color: black" value="<c:out value='${user.phone}' />" type="text" id="phone" name="phone" required="required">
+        </div>
 
-                            <div class="row_2">
-						    <label for="room">User room:</label>
-						    <select  id="room" name="room" required="required">
-						    
-						    	<c:choose>
-						            <c:when test="${user.room == ''}">
-						                <option value="" selected="selected"></option>
-						            </c:when>
-						            <c:otherwise>
-						                <option value=""></option>
-						            </c:otherwise>
-						        </c:choose>
-						        <c:choose>
-						            <c:when test="${user.room == 'A-1'}">
-						                <option value="A-1" selected="selected">A-1</option>
-						            </c:when>
-						            <c:otherwise>
-						                <option value="A-1">A-1</option>
-						            </c:otherwise>
-						        </c:choose>
-						        
-						        <c:choose>
+        <div class="row_2">
+            <label for="room">User room:</label>
+            <select id="room" name="room" required="required">
+                <c:choose>
+                    <c:when test="${user.room == ''}">
+                        <option value="" selected="selected"></option>
+                    </c:when>
+                    <c:otherwise>
+                        <option value=""></option>
+                    </c:otherwise>
+                </c:choose>
+                <c:choose>
+                    <c:when test="${user.room == 'A-1'}">
+                        <option value="A-1" selected="selected">A-1</option>
+                    </c:when>
+                    <c:otherwise>
+                        <option value="A-1">A-1</option>
+                    </c:otherwise>
+                </c:choose>
+                
+                		<c:choose>
 						            <c:when test="${user.room == 'A-2'}">
 						                <option value="A-2" selected="selected">A-2</option>
 						            </c:when>
@@ -185,14 +177,14 @@
 						                <option value="C-2">C-2</option>
 						            </c:otherwise>
 						        </c:choose>
-				    			</select>
-								</div>
-				
-				                 <div class="event">
-				    			<button type="submit"  >Update</button>
-				                   </div>
-				               </div>
-				           </form>
+           		 </select>
+        				</div>
+        
+        			<div class="event">
+            <button type="submit">Update</button>
+        </div>
+    </div>
+</form>
         </section>
     </div>
    
